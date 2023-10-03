@@ -2,7 +2,7 @@
 
 class Web::Admin::VacanciesController < Web::Admin::ApplicationController
   def index
-    query = query_params({ s: 'created_at desc' })
+    query = query_params({s:'created_at desc'})
     respond_to do |format|
       format.html do
         @q = Vacancy.ransack(query)
